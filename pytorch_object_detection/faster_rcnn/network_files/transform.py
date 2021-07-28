@@ -7,6 +7,12 @@ import torchvision
 
 from .image_list import ImageList
 
+'''
+GeneralizedRCNNTransform: 表示传出backbone之前的操作，主要是normalize和resize
+PostProcess: map predicted bbox back to the origional image
+'''
+
+
 
 @torch.jit.unused
 def _resize_image_onnx(image, self_min_size, self_max_size):
